@@ -1,9 +1,11 @@
 FROM golang:1.19-alpine
 
-WORKDIR /usr/src/app
+RUN mkdir /app
 
-COPY /go/ /usr/src/app/
+ADD /go /app
 
-CMD ["go","run","/usr/src/app/go/hello.go"]
+WORKDIR /app
 
-EXPOSE 8080
+CMD ["go","run","main.go"]
+
+EXPOSE 5000
