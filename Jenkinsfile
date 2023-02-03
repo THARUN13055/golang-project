@@ -25,5 +25,13 @@ pipeline{
                 '''
             }
         }
+
+        stage('docker push'){
+            steps{
+                withCredentials([usernameColonPassword(credentialsId: 'dockerhub', variable: 'dockerhub')]) {
+                    sh "docker push tharun13055/$JOB_NAME:latest"
+                }
+            }
+        }
     }
 }
