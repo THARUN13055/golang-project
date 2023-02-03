@@ -16,5 +16,14 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/THARUN13055/golang-project.git'
             }
         }
+
+        stage('docker build golang'){
+            steps{
+                sh '''
+                docker build -t tharun13055/$JOB_NAME:latest .
+                docker purne -f
+                '''
+            }
+        }
     }
 }
