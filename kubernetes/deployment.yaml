@@ -14,7 +14,7 @@ spec:
     spec:    
       containers:
       - name: go-container
-        image: tharun13055/go-project:latest
+        image: tharun13055/go_project:latest
         resources:
           limits:
             memory: "128Mi"

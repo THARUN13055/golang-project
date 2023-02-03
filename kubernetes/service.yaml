@@ -6,11 +6,13 @@ metadata:
 spec:
   selector:
     app: go-deployment
-  type: NodePort
+  type: LoadBalancer
   ports:
-  - port: 80
-    targetPort: 5000 
-    nodePort: 320000
+  - port: 5000
+    targetPort: 5000
+    
+    
+  
 
  
 
