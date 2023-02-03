@@ -31,6 +31,7 @@ pipeline{
                 script{
                     withCredentials([string(credentialsId: 'tharun13055', variable: 'dockerhub')]) {
                         sh "docker login -u tharun13055 -p ${dockerhub}"
+                        sh "docker push tharun13055/$JOB_NAME:latest"
                     }
                 }
             }
