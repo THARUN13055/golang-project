@@ -21,7 +21,7 @@ pipeline{
             steps{
                 sh '''
                 docker build -t tharun13055/$JOB_NAME:latest .
-                docker purne -f
+                docker image prune -f
                 '''
             }
         }
